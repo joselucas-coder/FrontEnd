@@ -108,7 +108,7 @@ img {
 }
 
 /* --- DESKTOP --- */
-@media (min-width: 768px) {
+@media (width >= 768px) {
   body {
     flex-direction: row;
   }
