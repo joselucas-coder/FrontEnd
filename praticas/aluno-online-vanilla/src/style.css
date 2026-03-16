@@ -20,7 +20,7 @@ body {
   color: var(--cor-texto);
   background-color: var(--cor-fundo);
   display: flex;
-  flex-direction: column; /* mobile: sidebar em cima, conteúdo embaixo */
+  flex-direction: column;
 }
 
 ul {
@@ -43,14 +43,16 @@ aside {
 
 header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   background: #fff;
   border-bottom: 1px solid #ccc;
   padding: 1.25rem 1rem;
 }
 
 .ola {
+  width: 100%;
   font-size: 1.6rem;
   font-weight: var(--fonte-peso-bold);
 }
@@ -59,6 +61,7 @@ header {
   font-size: 1rem;
   font-weight: var(--fonte-peso-bold);
   margin-top: 0.3rem;
+  margin-right: auto;
 }
 
 header img {
@@ -69,12 +72,10 @@ header img {
 
 main {
   padding: 1rem;
-}
-
-.grade-cards {
   display: grid;
-  grid-template-columns: 1fr; /* mobile: 1 card por linha */
+  grid-template-columns: 1fr;
   gap: 1rem;
+  align-content: start;
 }
 
 section {
@@ -100,38 +101,37 @@ section li {
   font-size: 0.9rem;
 }
 
-/* desktop: sidebar aparece e cards ficam em 2 colunas */
+/* desktop: sidebar*/
 @media (width >= 768px) {
   body {
-    flex-direction: row; /* sidebar na esquerda, conteúdo na direita */
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "sidebar cabecalho"
+      "sidebar conteudo";
+    min-height: 100vh;
   }
 
   aside {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    width: 220px;
-    flex-shrink: 0;
+    grid-area: sidebar;
     background: #fff;
     border-right: 1px solid #ccc;
     padding: 1.25rem 1rem;
-    min-height: 100vh;
   }
 
-  h1 {
+  aside h1 {
     font-size: 1rem;
   }
 
-  .marca {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .marca img {
+  aside img.logo {
     width: 28px;
     height: 28px;
     border-radius: 4px;
+    display: inline-block;
   }
 
   nav ul {
@@ -147,12 +147,12 @@ section li {
     font-weight: var(--fonte-peso-bold);
   }
 
-  .area-principal {
-    flex: 1;
-    min-width: 0;
+  header {
+    grid-area: cabecalho;
   }
 
-  .grade-cards {
-    grid-template-columns: repeat(2, 1fr); /* desktop: 2 cards por linha */
+  main {
+    grid-area: conteudo;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
