@@ -8,9 +8,11 @@
   </head>
 
   <body>
-    <aside>
-      <img src="/praticas/aluno-online-vanilla/public/learn.svg" alt="Logo Aluno Online" class="logo" />
-      <h1>Aluno Online</h1>
+    <aside class="menu-lateral">
+      <div class="marca">
+        <img src="/praticas/aluno-online-vanilla/public/learn.svg" alt="Logo Aluno Online" class="logo" />
+        <span class="nome-sistema">Aluno Online</span>
+      </div>
       <nav>
         <ul>
           <li><a href="#">Dashboard</a></li>
@@ -23,40 +25,45 @@
       </nav>
     </aside>
 
-   <header>
-  <p class="ola">Olá, Aluno!</p>
-  <p class="boas-vindas">Bem-vindo ao portal do aluno</p>
-  <img src="/praticas/aluno-online-vanilla/public/avatar.svg" alt="Avatar do usuário" />
-</header>
+    <div class="conteudo-geral">
+      
+      <header class="barra-superior">
+        <div class="saudacao">
+          <h1>Olá, Aluno!</h1> <p class="boas-vindas">Bem-vindo ao portal do aluno</p>
+        </div>
+        <img src="/praticas/aluno-online-vanilla/public/avatar.svg" alt="Avatar do usuário" class="avatar" />
+      </header>
 
-    <main>
-      <section>
-        <h2>Mural de Avisos</h2>
-        <ul>
-          <li>Inscrição para o projeto de extensão</li>
-          <li>Eleição para representante de turma</li>
-        </ul>
-      </section>
+      <main class="area-principal">
+        <section class="cartao">
+          <h2>Mural de Avisos</h2>
+          <ul>
+            <li>Inscrição para o projeto de extensão</li>
+            <li>Eleição para representante de turma</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>Calendário Acadêmico</h2>
-        <ul>
-          <li>23/02 - Início do período letivo 2026-1</li>
-          <li>25/04 - Prazo final para aplicação da P1</li>
-          <li>23/06 - Prazo final para aplicação da P2</li>
-          <li>04/07 - Fim do período letivo 2026-1</li>
-        </ul>
-      </section>
+        <section class="cartao">
+          <h2>Calendário Acadêmico</h2>
+          <ul>
+            <li>23/02 - Início do período letivo 2026-1</li>
+            <li>25/04 - Prazo final para aplicação da P1</li>
+            <li>23/06 - Prazo final para aplicação da P2</li>
+            <li>04/07 - Fim do período letivo 2026-1</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>Minhas Disciplinas</h2>
-        <ul>
-          <li>BI e Data Warehousing</li>
-          <li>Construção de Frontend</li>
-          <li>Documentação de Software Dev S</li>
-          <li>Fundamentos de Computação em Nuvem</li>
-        </ul>
-      </section>
-    </main>
+        <section class="cartao">
+          <h2>Minhas Disciplinas</h2>
+          <ul>
+            <li>BI e Data Warehousing</li>
+            <li>Construção de Frontend</li>
+            <li>Documentação de Software Dev S</li>
+            <li>Fundamentos de Computação em Nuvem</li>
+          </ul>
+        </section>
+      </main>
+
+    </div>
   </body>
 </html>
