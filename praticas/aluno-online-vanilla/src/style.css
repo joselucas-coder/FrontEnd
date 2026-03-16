@@ -38,13 +38,13 @@ img {
   max-width: 100%;
 }
 
-/* --- MOBILE FIRST --- */
+/* MOBILE */
 
 .menu-lateral {
   display: none;
 }
 
-.conteudo-geral {
+.area-principal {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -76,7 +76,7 @@ img {
   border-radius: 50%;
 }
 
-.area-principal {
+.grade-cartoes {
   padding: 1rem;
   display: grid;
   grid-template-columns: 1fr;
@@ -107,10 +107,10 @@ img {
   font-size: 0.9rem;
 }
 
-/* --- DESKTOP --- */
+/* PC */
 @media (width >= 768px) {
   body {
-    flex-direction: row;
+    flex-direction: row; 
   }
 
   .menu-lateral {
@@ -153,7 +153,7 @@ img {
     font-weight: var(--fonte-peso-bold);
   }
 
-  .area-principal {
+  .grade-cartoes {
     grid-template-columns: repeat(2, 1fr);
   }
 }
