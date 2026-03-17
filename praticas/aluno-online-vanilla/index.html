@@ -1,12 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aluno Online</title>
+    <link rel="stylesheet" href="/praticas/aluno-online-vanilla/src/style.css" />
   </head>
+
   <body>
-    <script type="module" src="/src/main.js"></script>
+    <aside class="menu-lateral">
+      <header class="marca">
+        <img src="/praticas/aluno-online-vanilla/public/learn.svg" alt="Logo Aluno Online" class="logo" />
+        <span class="nome-sistema">Aluno Online</span>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Notas</a></li>
+          <li><a href="#">Faltas</a></li>
+          <li><a href="#">Boletos</a></li>
+          <li><a href="#">Requerimentos</a></li>
+          <li><a href="#">Sair</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="area-principal">
+      
+      <header class="barra-superior">
+        <hgroup class="saudacao">
+          <h1>Olá, Aluno!</h1>
+          <p class="boas-vindas">Bem-vindo ao portal do aluno</p>
+        </hgroup>
+        <img src="/praticas/aluno-online-vanilla/public/avatar.svg" alt="Avatar do usuário" class="avatar" />
+      </header>
+
+      <section class="grade-cartoes">
+        <article class="cartao">
+          <h2>Mural de Avisos</h2>
+          <ul>
+            <li>Inscrição para o projeto de extensão</li>
+            <li>Eleição para representante de turma</li>
+          </ul>
+        </article>
+
+        <article class="cartao">
+          <h2>Calendário Acadêmico</h2>
+          <ul>
+            <li>23/02 - Início do período letivo 2026-1</li>
+            <li>25/04 - Prazo final para aplicação da P1</li>
+            <li>23/06 - Prazo final para aplicação da P2</li>
+            <li>04/07 - Fim do período letivo 2026-1</li>
+          </ul>
+        </article>
+
+        <article class="cartao">
+          <h2>Minhas Disciplinas</h2>
+          <ul>
+            <li>BI e Data Warehousing</li>
+            <li>Construção de Frontend</li>
+            <li>Documentação de Software Dev S</li>
+            <li>Fundamentos de Computação em Nuvem</li>
+          </ul>
+        </article>
+      </section>
+      
+    </main>
   </body>
 </html>
