@@ -162,7 +162,7 @@ img {
   }
 }
 
-/* Login*/
+/* Login */
 
 body.pagina-login {
   flex-direction: column;
@@ -246,11 +246,11 @@ body.pagina-login .logo {
 }
 
 .login-container button[type="submit"]:hover {
-  background-color: #000000;
+  background-color: #000;
   color: #fff;
 }
 
-/* Mensagem de erro por campo — criada dinamicamente pelo JS */
+/* Mensagem de erro no Campo*/
 .campo-erro {
   display: none;
   color: #cb2525;
@@ -262,7 +262,7 @@ body.pagina-login .logo {
 
 .login-container input.input-erro:focus {
   border-color: #dc3545;
-  box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.15);
+  box-shadow: 0 0 0 2px rgb(220 53 69 / 15%);
 }
 
 body.pagina-login footer {
