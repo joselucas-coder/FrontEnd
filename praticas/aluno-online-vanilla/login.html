@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Aluno Online</title>
+    <link rel="stylesheet" href="/praticas/aluno-online-vanilla/src/style.css">
+</head>
+<body class="pagina-login">
+    <main class="login-container">
+        <img src="/praticas/aluno-online-vanilla/public/learn.svg" alt="Logo Aluno Online" class="logo" />
+        <h1>Aluno Online</h1>
+
+                <form id="login-formulario" novalidate>
+            <fieldset class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" />
+                <span class="campo-erro"></span>
+            </fieldset>
+
+            <fieldset class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" />
+                <span class="campo-erro"></span>
+            </fieldset>
+
+            <button type="submit">Entrar</button>
+        </form>
+            </main>
+
+    <footer>
+        <p>© 2026. Todos os direitos reservados.</p>
+    </footer>
+
+  <script src="src/main.js" type="module"></script>
+</body>
+</html>
