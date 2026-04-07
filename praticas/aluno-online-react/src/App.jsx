@@ -1,7 +1,20 @@
-import "./App.css";
+import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
+import Faltas from './pages/Faltas';
+import Notas from './pages/Notas';
+import Boletos from './pages/Boletos';
+import Requerimentos from './pages/Requerimentos';
 
-function App() {
-  return <></>;
+export default function App() {
+  return (
+    <>
+
+      {/* <Login /> */}
+      {/*/<Dashboard /> */}
+      {/* <Notas /> */}
+      {/* <Faltas /> */}
+      {/* <Boletos /> */}
+      {/* <Requerimentos /> */}
+    </>
+  );
 }
-
-export default App;
