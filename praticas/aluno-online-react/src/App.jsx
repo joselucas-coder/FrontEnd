@@ -1,7 +1,18 @@
-import "./App.css";
+import Dashboard from './pages/Dashboard';
+import Faltas from './pages/Faltas';
+import Boletos from './pages/Boletos';
+import Notas from './pages/Notas';
+import Requerimentos from './pages/Requerimentos';
 
-function App() {
-  return <></>;
+export default function App() {
+  return (
+    <>
+      {/* Tiramos o comentário apenas do Dashboard para testar a tela dele */}
+      <Dashboard />
+       {/*<Notas />*/}
+      {/* <Faltas /> */}
+      {/* <Boletos /> */}
+      {/* <Requerimentos /> */}
+    </>
+  );
 }
-
-export default App;
