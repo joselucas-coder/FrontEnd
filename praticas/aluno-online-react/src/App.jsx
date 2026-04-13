@@ -12,13 +12,8 @@ import Requerimentos from './pages/Requerimentos';
 export default function App() {
   return (
     <>
-
-      {/* <Login /> */}
-      {/*/<Dashboard /> */}
-      {/* <Notas /> */}
-      {/* Tiramos o comentário apenas do Dashboard para testar a tela dele */}
       <Dashboard />
-       {/*<Notas />*/}
+      {/*<Notas />*/}
       {/* <Faltas /> */}
       {/* <Boletos /> */}
       {/* <Requerimentos /> */}
