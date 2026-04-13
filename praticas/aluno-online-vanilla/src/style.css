@@ -7,6 +7,12 @@
   --line-height: 1.6;
 }
 
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -38,7 +44,9 @@ img {
   max-width: 100%;
 }
 
-/* MOBILE */
+/* =====================
+   DASHBOARD — MOBILE
+   ===================== */
 
 .menu-lateral {
   display: none;
@@ -107,10 +115,12 @@ img {
   font-size: 0.9rem;
 }
 
-/* PC */
+/* =====================
+   DASHBOARD — PC
+   ===================== */
 @media (width >= 768px) {
   body {
-    flex-direction: row; 
+    flex-direction: row;
   }
 
   .menu-lateral {
@@ -156,4 +166,114 @@ img {
   .grade-cartoes {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* Login */
+
+body.pagina-login {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 1rem;
+  background-color: #fff;
+}
+
+body.pagina-login .logo {
+  width: 100px;
+  height: 100px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  gap: 0.5rem;
+  border: 1.5px solid #d7d7d7;
+}
+
+.login-container h1 {
+  font-size: 2.2rem;
+  font-weight: var(--fonte-peso-bold);
+  margin-bottom: 0.75rem;
+}
+
+.login-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.login-container .input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.login-container label {
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.login-container input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: var(--fonte-familia);
+  transition: border-color 0.2s;
+}
+
+.login-container input:focus {
+  outline: none;
+  border-color: #949ea8;
+}
+
+.login-container button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #E9E9E9;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s;
+  font-weight: 550;
+}
+
+.login-container button[type="submit"]:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Mensagem de erro no Campo */
+.campo-erro {
+  display: none;
+  color: #cb2525;
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+  font-weight: 500;
+}
+
+
+.login-container input.input-erro:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 2px rgb(220 53 69 / 15%);
+}
+
+body.pagina-login footer {
+  margin-top: 4rem;
+  font-size: 1rem;
+  color: #5e5e5e;
+  font-weight: 500;
 }
