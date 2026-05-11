@@ -5,15 +5,15 @@ export default function Sidebar() {
     const classesBase = "flex items-center gap-2 px-4 py-2 rounded-md transition-colors font-medium ";
 
     return isActive 
-      ? classesBase + "bg-blue-600 text-white" 
+      ? classesBase + "bg-black text-white" 
       : classesBase + "text-gray-700 hover:bg-[#d1d1d1] hover:text-gray-900";
   };
 
   return (
     <aside className="hidden md:flex flex-col gap-6 w-[250px] bg-[#E9E9E9] border-r border-gray-300 p-5 h-screen sticky top-0">      
-      <header className="flex items-center gap-2 border-b border-gray-300 pb-4">
-        <img src="/learn.svg" alt="Logo Aluno Online" className="w-7 h-7 rounded" />
-        <span className="text-base font-bold text-gray-800">Aluno Online</span>
+      <header className="flex flex items-center gap-2 border-b border-gray-300 pb-4">
+        <img src="/learn.svg" alt="Logo Aluno Online" className="w-16 h-16 rounded" />
+       <span className="text-xl font-bold text-gray-800">Aluno Online</span>
       </header>
       
       <nav className="flex-1">
