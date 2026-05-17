@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../../contexts/AuthContext';
 
 export default function Sidebar() {
 
-  const { logout } = useAuth(); // Traga a função de logout
+  const { logout } = useAuth();
 
   const navLinkClass = ({ isActive }) => {
     const classesBase = "flex items-center gap-2 px-4 py-2 rounded-md transition-colors font-medium ";

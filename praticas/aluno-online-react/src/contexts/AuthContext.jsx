@@ -7,7 +7,11 @@ export function AuthProvider({ children }) {
   const [usuario, setUsuario] = useState(null);
 
   const login = (dadosUsuario) => {
-    setUsuario(dadosUsuario);
+    setUsuario({
+        id: 0,
+        nome: "José Lucas",
+        email: dadosUsuario.email
+    });
     setAutenticado(true);
   };
 

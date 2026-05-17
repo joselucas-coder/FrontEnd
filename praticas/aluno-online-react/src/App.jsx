@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router';
-import { useAuth } from './Components/contexts/AuthContext';
+import { useAuth } from './contexts/AuthContext';
 import Layout from './Components/Layout/Layout';
 import Dashboard from './Pages/Dashboard';
 import Faltas from './Pages/Faltas';
@@ -9,7 +9,7 @@ import Requerimentos from './Pages/Requerimentos';
 import Login from './Pages/Login';
 
 function App() {
-  const { autenticado } = useAuth(); // Puxa o estado global
+  const { autenticado } = useAuth();
 
   return (
     <Routes>

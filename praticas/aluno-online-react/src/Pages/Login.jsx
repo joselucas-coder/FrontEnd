@@ -1,15 +1,13 @@
 import { useState } from "react";
 import FormLogin from "../Components/FormLogin";
-import { useAuth } from "../Components/contexts/AuthContext";
+import { useAuth } from "../contexts/AuthContext";
 
-// Removemos a prop { navegaPara }
 export default function Login() {
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
     const [emailErro, setEmailErro] = useState("");
     const [senhaErro, setSenhaErro] = useState("");
 
-    // Trazendo a função login do contexto
     const { login } = useAuth();
 
     const handleSubmit = (e) => {
@@ -39,8 +37,8 @@ export default function Login() {
 
         if (formularioValido) {
             login({
-                nome: "José Lucas",
-                email: email
+                email: email,
+                senha: senha
             });
         }
     };
