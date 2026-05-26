@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import Header from '../Components/Header';
 
 export default function RequerimentoForm() {
-  const dataHoje = new Date().toISOString().split('T')[0];
+  const dataHoje = new Date().toLocaleDateString('en-CA'); 
 
   const { register, handleSubmit, reset, formState: { errors } } = useForm({
     defaultValues: {
@@ -28,8 +28,7 @@ export default function RequerimentoForm() {
         <main className="mt-6 max-w-2xl">
           <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
             
-            {/* Tipo de Requerimento */}
-            <div className="flex flex-col">
+              <div className="flex flex-col">
               <label className="mb-2 font-semibold text-gray-700">Tipo de Requerimento</label>
               <select 
                 {...register("tipo", { required: "O Tipo de Requerimento é obrigatório." })}
@@ -57,18 +56,20 @@ export default function RequerimentoForm() {
               {errors.descricao && <span className="text-red-500 text-sm mt-1">{errors.descricao.message}</span>}
             </div>
 
-          
             <div className="flex flex-col">
               <label className="mb-2 font-semibold text-gray-700">Data do Requerimento</label>
               <input 
                 type="date"
-                {...register("dataRequerimento", { required: "A data é obrigatória." })}
-                className="border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-64"
+                readOnly
+                {...register("dataRequerimento", { 
+                  required: "A data é obrigatória.",
+                  validate: (value) => value === dataHoje || "Tentativa de fraude! A data do requerimento não pode ser alterada."
+                })}
+                className="border border-gray-300 p-3 rounded-md bg-gray-100 text-gray-600 focus:outline-none cursor-not-allowed w-64"
               />
               {errors.dataRequerimento && <span className="text-red-500 text-sm mt-1">{errors.dataRequerimento.message}</span>}
             </div>
 
-            {/* Botões: Cancelar e Salvar */}
             <div className="flex gap-4">
               <button 
                 type="button"
