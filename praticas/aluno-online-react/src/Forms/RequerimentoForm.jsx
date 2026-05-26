@@ -3,7 +3,14 @@ import { useNavigate } from 'react-router';
 import Header from '../Components/Header';
 
 export default function RequerimentoForm() {
-  const { register, handleSubmit, reset, formState: { errors } } = useForm();
+  const dataHoje = new Date().toISOString().split('T')[0];
+
+  const { register, handleSubmit, reset, formState: { errors } } = useForm({
+    defaultValues: {
+      dataRequerimento: dataHoje
+    }
+  });
+  
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
@@ -21,13 +28,14 @@ export default function RequerimentoForm() {
         <main className="mt-6 max-w-2xl">
           <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
             
+            {/* Tipo de Requerimento */}
             <div className="flex flex-col">
               <label className="mb-2 font-semibold text-gray-700">Tipo de Requerimento</label>
               <select 
                 {...register("tipo", { required: "O Tipo de Requerimento é obrigatório." })}
                 className="border border-gray-300 p-3 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                <option value="">Selecione uma opção</option>
+                <option value="">Selecione um tipo...</option>
                 <option value="Revisão de Menção">Revisão de Menção</option>
                 <option value="Dispensa de Disciplina">Dispensa de Disciplina</option>
                 <option value="Trancamento de Matrícula">Trancamento de Matrícula</option>
@@ -44,18 +52,39 @@ export default function RequerimentoForm() {
                   minLength: { value: 10, message: "A descrição deve ter no mínimo 10 caracteres." }
                 })}
                 rows="5"
-                placeholder="Descreva o motivo da sua solicitação..."
                 className="border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               {errors.descricao && <span className="text-red-500 text-sm mt-1">{errors.descricao.message}</span>}
             </div>
 
-            <button 
-              type="submit" 
-              className="bg-blue-600 text-white font-bold py-3 px-6 rounded-md hover:bg-blue-700 transition w-40"
-            >
-              Salvar
-            </button>
+          
+            <div className="flex flex-col">
+              <label className="mb-2 font-semibold text-gray-700">Data do Requerimento</label>
+              <input 
+                type="date"
+                {...register("dataRequerimento", { required: "A data é obrigatória." })}
+                className="border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-64"
+              />
+              {errors.dataRequerimento && <span className="text-red-500 text-sm mt-1">{errors.dataRequerimento.message}</span>}
+            </div>
+
+            {/* Botões: Cancelar e Salvar */}
+            <div className="flex gap-4">
+              <button 
+                type="button"
+                onClick={() => navigate("/requerimentos")}
+                className="bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-md hover:bg-gray-300 transition"
+              >
+                Cancelar
+              </button>
+
+              <button 
+                type="submit" 
+                className="bg-blue-600 text-white font-bold py-3 px-6 rounded-md hover:bg-blue-700 transition"
+              >
+                Salvar
+              </button>
+            </div>
 
           </form>
         </main>
