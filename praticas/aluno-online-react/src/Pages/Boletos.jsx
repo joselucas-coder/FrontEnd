@@ -1,5 +1,5 @@
-import Header from '../components/Header';
-import TextoDescritivo from '../components/TextoDescritivo';
+import Header from '../Components/Header';
+import TextoDescritivo from '../Components/TextoDescritivo';
 import Tabela from '../components/Tabela';
 
 export default function Boletos() {
