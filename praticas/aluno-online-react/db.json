@@ -1,0 +1,47 @@
+{
+  "requerimentos": [
+    {
+      "id": "1",
+      "tipo": "Mudança de Turno",
+      "descricao": "Gostaria de mudar para o noturno por conta do trabalho.",
+      "dataRequerimento": "2023-10-10",
+      "situacao": "Deferido"
+    },
+    {
+      "dataRequerimento": "2026-06-02",
+      "tipo": "Revisão de Menção",
+      "descricao": "biriri bororo tiriri tarara",
+      "situacao": "Em análise",
+      "id": "PPvw-2TAzgw"
+    },
+    {
+      "dataRequerimento": "2026-06-02",
+      "tipo": "Dispensa de Disciplina",
+      "descricao": "ain que num sei oq, que num se oq la ",
+      "situacao": "Em análise",
+      "id": "uVSp3nWbhL0"
+    },
+    {
+      "dataRequerimento": "2026-06-02",
+      "tipo": "Dispensa de Disciplina",
+      "descricao": "efafaefafafdafadfa",
+      "situacao": "Em análise",
+      "id": "HZnYSZR9mLQ"
+    },
+    {
+      "dataRequerimento": "2026-06-02",
+      "tipo": "Mudança de Turno",
+      "descricao": "toma toma toma toma toma",
+      "situacao": "Em análise",
+      "id": "ais3J8Aawk0"
+    },
+    {
+      "dataRequerimento": "2026-06-02",
+      "tipo": "Dispensa de Disciplina",
+      "descricao": "Tchurusbangos e TchurusBagos",
+      "situacao": "Em análise",
+      "id": "xK0Zo8L0c0I"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
