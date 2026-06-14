@@ -10,7 +10,7 @@ export default function Login() {
 
     const { login } = useAuth();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault(); 
         
         let formularioValido = true;
@@ -36,13 +36,18 @@ export default function Login() {
         }
 
         if (formularioValido) {
-            login({
-                email: email,
-                senha: senha
-            });
+            try {
+                // Aguarda a resposta do contexto
+                await login({
+                    email: email,
+                    senha: senha
+                });
+            } catch {
+                // Caso caia no throw new Error('Credenciais inválidas') do authService
+                setSenhaErro("E-mail ou senha incorretos.");
+            }
         }
     };
-
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-white font-sans">
             <div className="bg-white p-8 rounded-lg border-1 border-[#d7d7d7] w-full max-w-[460px]">
