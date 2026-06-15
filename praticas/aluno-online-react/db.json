@@ -43,5 +43,15 @@
       "id": "xK0Zo8L0c0I"
     }
   ],
+
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "José Lucas",
+      "email": "joselucasadmininastror@iesb.br",
+      "senha": "123456"
+    } 
+  ],
+
   "$schema": "./node_modules/json-server/schema.json"
 }
